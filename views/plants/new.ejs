@@ -1,0 +1,42 @@
+<% layout('layouts/boilerplate') -%>
+<div class="container mt-3">
+  <h1 class="text-center">New Plant</h1>
+  <form action="/plants" method="POST">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input class="form-control" type="text" name="plant[name]" id="name" />
+    </div>
+    <div class="form-group">
+      <label for="family">Family:</label>
+      <input
+        class="form-control"
+        type="text"
+        name="plant[family]"
+        id="family"
+      />
+    </div>
+    <div class="form-group">
+      <label for="name">Kingdom:</label>
+      <input
+        class="form-control"
+        type="text"
+        name="plant[kingdom]"
+        id="kingdom"
+      />
+    </div>
+    <div class="form-group">
+      <label for="name">Image URL:</label>
+      <input class="form-control" type="text" name="plant[image]" id="image" />
+    </div>
+    <div class="form-group">
+      <label for="name">Description:</label>
+      <textarea
+        class="form-control"
+        type="text"
+        name="plant[description]"
+        id="description"
+      ></textarea>
+    </div>
+    <button class="btn btn-success">Submit</button>
+  </form>
+</div>

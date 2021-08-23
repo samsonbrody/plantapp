@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate') -%>
+<div class="container">
+  <div class="card mt-3 mb-3">
+    <img class="card-img-top" src="<%=foundPlant.image%>" alt="" />
+    <div class="card-body">
+      <h5 class="card-title"><%= foundPlant.name %></h5>
+      <p class="card-text"><%= foundPlant.description %></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item text-muted">
+        Kingdom: <%= foundPlant.kingdom %>
+      </li>
+      <li class="list-group-item"><%= foundPlant.family %></li>
+    </ul>
+    <div class="card-body">
+      <a class="btn btn-warning mb-2" href="/plants/<%=foundPlant._id%>/edit"
+        >EDIT</a
+      >
+      <form action="/plants/<%=foundPlant._id%>?_method=DELETE" method="POST">
+        <button class="btn btn-danger">DELETE</button>
+      </form>
+      <a class="card-link btn btn-success mt-2" href="/plants">BACK</a>
+    </div>
+  </div>
+</div>

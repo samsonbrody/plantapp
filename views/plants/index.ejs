@@ -1,0 +1,23 @@
+<% layout('layouts/boilerplate') -%>
+
+<div>
+  <% for(let plant of allPlants) { %>
+  <div class="card mb-3 mx-4 my-4">
+    <div class="row"></div>
+    <div class="card-body">
+      <img class="card-img-top rounded-lg mb-3" src="<%=plant.image%>" alt="" />
+      <h1 class="card-title"><%=plant.name%></h1>
+      <!-- <h4 class="card-title">Family: <%=plant.family%></h4>
+      <h4 class="card-title">Kingdom: <%=plant.kingdom%></h4>
+      <p class="card-text"><%=plant.description%></p> -->
+      <a href="/plants/<%=plant._id%>">VIEW</a>
+    </div>
+  </div>
+  <% } %>
+</div>
+<div>
+  <a class="btn btn-success d-flex flex-column mb-3" href="/plants/new"
+    >NEW PLANT</a
+  >
+</div>
+<div></div>
